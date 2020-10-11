@@ -34,7 +34,7 @@ describe('Test Login Page', () => {
     const result = await LA.LoginAction();
     expect(result).toHaveProperty('token', expect.any(String));
     expect(result).toHaveProperty('username', expect.any(String));
-    expect(result).toHaveProperty('id', expect.any(Number));
+    expect(result).toHaveProperty('id', expect.any(String));
   });
 })
 
