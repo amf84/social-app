@@ -1,11 +1,14 @@
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import React from 'react';
+import { Provider } from 'react-redux';
+import { Store } from '../Redux/Store';
 import Login from './Login';
 import * as LA from './LoginAction';
 
+
 describe('Test Login Page', () => {
   
-  const wrapper = shallow(<Login />);
+  const wrapper = mount(<Provider store={Store}><Login /></Provider>);
 
   test('check render inputs', () => {
     const username = wrapper.find('#username[name="username"]');
@@ -15,12 +18,6 @@ describe('Test Login Page', () => {
   });
 
   test('check click submit', () => {
-    
-    const clickSubmit = wrapper.find('#loginSubmit').simulate('click');
-    expect('').toBe('');
-  });
-
-  it('ok q1', () => {
     const spy = jest.spyOn(LA, 'LoginAction');
     /*spy.mockImplementation(() => {
       return Promise.resolve({data: []})
@@ -33,8 +30,8 @@ describe('Test Login Page', () => {
   it('Test LoginAction', async () => {
     const result = await LA.LoginAction();
     expect(result).toHaveProperty('token', expect.any(String));
-    expect(result).toHaveProperty('username', expect.any(String));
-    expect(result).toHaveProperty('id', expect.any(Number));
+    expect(result).toHaveProperty('name', expect.any(String));
+    expect(result).toHaveProperty('uid', expect.any(Number));
   });
 })
 

@@ -1,7 +1,7 @@
 export const LoginAction = async (data) => {
     return {
-        id: 1,
-        username: "adrián",
+        uid: 1,
+        name: "adrián",
         token: 'token.mytoken.token'
     };
 }

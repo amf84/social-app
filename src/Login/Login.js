@@ -1,15 +1,19 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { LoginAction } from "./LoginAction";
 import { useLogin } from "./useLogin";
+import * as auth from './../Redux/actions/authActions'
 
 export default () => {
+  const dispatch = useDispatch();
   const { state, handleInputChange } = useLogin({
     username: "",
-    password: "",
+    password: ""
   });
 
-  const handleSubmit = () => {
-    LoginAction(state);
+  const handleSubmit = async () => {
+    const { uid, name, token } = await LoginAction(state);
+    dispatch(auth.loginSuccessAction(uid, name, token));
   };
 
   return (
