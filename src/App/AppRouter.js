@@ -6,54 +6,50 @@ import {
   Redirect,
 } from "react-router-dom";
 import Login from "../Login/Login";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
+import { Layout } from "../Layout/Layout";
 
-
-export function AppRouter () {
+export function AppRouter() {
   return (
     <Router>
-      <div>
         <Switch>
           <AuthRoute exact path="/login">
-          <Login />
+            <Layout component={<Login />} />
           </AuthRoute>
           <PrivateRoute exact path="/">
-            <Home />
+            <Layout component={<Home />} />
           </PrivateRoute>
           <PrivateRoute exact path="/post/:id">
-            <Home />
+            <Layout component={<Home />} />
           </PrivateRoute>
         </Switch>
-      </div>
     </Router>
   );
 }
 
 function AuthRoute({ children, ...rest }) {
-    const { uid } = useSelector( state => state.auth );
-    return (
-      <Route
-        {...rest}
-        render={({ location }) =>
-            !uid ? (
-            children
-          ) : (
-            <Redirect
-              to={{
-                pathname: "/",
-                state: { from: location }
-              }}
-            />
-          )
-        }
-      />
-    );
-  }
-
-
+  const { uid } = useSelector((state) => state.auth);
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        !uid ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/",
+              state: { from: location },
+            }}
+          />
+        )
+      }
+    />
+  );
+}
 
 function PrivateRoute({ children, ...rest }) {
-    const { uid } = useSelector( state => state.auth );
+  const { uid } = useSelector((state) => state.auth);
   return (
     <Route
       {...rest}
@@ -64,7 +60,7 @@ function PrivateRoute({ children, ...rest }) {
           <Redirect
             to={{
               pathname: "/login",
-              state: { from: location }
+              state: { from: location },
             }}
           />
         )
@@ -73,12 +69,10 @@ function PrivateRoute({ children, ...rest }) {
   );
 }
 
-
-
 function Home() {
   return <h3>Protected</h3>;
 }
 
 function ProtectedPage1() {
-    return <h3>Ok master.....</h3>;
-  }
+  return <h3>Ok master.....</h3>;
+}
