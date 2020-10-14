@@ -1,5 +1,9 @@
 import { types } from '../types';
-export const authReducer = (state = {}, action) => {
+
+const session = sessionStorage.getItem('auth');
+const initialState = {}; //(session)? JSON.parse(session) : {};
+
+export const authReducer = (state = initialState, action) => {
     switch(action.type) {
         case types.login: 
             return {

@@ -25,7 +25,7 @@ export const loginSuccessAction = (uid, displayName, token) => {
     }
 }
 
-export const logoutAction = (uid, displayName) => {
+export const logoutAction = () => {
     return {
         type: types.logout
     }

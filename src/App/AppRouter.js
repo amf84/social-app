@@ -8,6 +8,8 @@ import {
 import Login from "../Login/Login";
 import { useSelector } from "react-redux";
 import { Layout } from "../Layout/Layout";
+import { Home } from "../Home/Home";
+import { Post } from "../Post/Post";
 
 export function AppRouter() {
   return (
@@ -20,7 +22,7 @@ export function AppRouter() {
             <Layout component={<Home />} />
           </PrivateRoute>
           <PrivateRoute exact path="/post/:id">
-            <Layout component={<Home />} />
+            <Layout component={<Post />} />
           </PrivateRoute>
         </Switch>
     </Router>
@@ -67,12 +69,4 @@ function PrivateRoute({ children, ...rest }) {
       }
     />
   );
-}
-
-function Home() {
-  return <h3>Protected</h3>;
-}
-
-function ProtectedPage1() {
-  return <h3>Ok master.....</h3>;
 }

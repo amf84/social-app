@@ -12,8 +12,9 @@ export default () => {
   });
 
   const handleSubmit = async () => {
-    const { uid, name, token } = await LoginAction(state);
-    dispatch(auth.loginSuccessAction(uid, name, token));
+    const user = await LoginAction(state);
+    //sessionStorage.setItem('auth', JSON.stringify(user));
+    dispatch(auth.loginSuccessAction(user.uid, user.name, user.token));
   };
 
   return (
