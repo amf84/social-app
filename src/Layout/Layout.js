@@ -9,6 +9,9 @@ export const Layout = ({component}) => {
       <Main>
         {component}
       </Main>
+      <footer>
+        adriswbm@gmail.com
+      </footer>
     </>
   );
 };
