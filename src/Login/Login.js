@@ -3,6 +3,27 @@ import { useDispatch } from "react-redux";
 import { LoginAction } from "./LoginAction";
 import { useLogin } from "./useLogin";
 import * as auth from './../Redux/actions/authActions'
+import styled from "styled-components";
+
+
+const Form = styled.form`{
+  height: 150px;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    align-items: center;
+    justify-content: space-around;
+  & label {
+    display: inline-block;
+    width: 100px;
+  }
+  & input {
+    font-size: 18px;
+    padding: 5px;
+  }
+}`;
 
 export default () => {
   const dispatch = useDispatch();
@@ -19,7 +40,7 @@ export default () => {
 
   return (
     <>
-      <form id="LoginForm">
+      <Form id="LoginForm">
         <div className="formControl">
           <label htmlFor="username">Usario:</label>
           <input
@@ -43,7 +64,7 @@ export default () => {
         <div className="formControl">
           <input id="loginSubmit" type="button" onClick={handleSubmit} value="Login" />
         </div>
-      </form>
+      </Form>
     </>
   );
 };
