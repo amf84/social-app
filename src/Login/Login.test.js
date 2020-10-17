@@ -10,7 +10,7 @@ describe('Test Login Page', () => {
   
   const wrapper = mount(<Provider store={Store}><Login /></Provider>);
 
-  test('check render inputs', () => {
+  test('Check render inputs', () => {
     const username = wrapper.find('#username[name="username"]');
     const password = wrapper.find('#password[name="password"]');
     expect(username.length).toBe(1);
