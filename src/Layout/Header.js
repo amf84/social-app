@@ -15,6 +15,9 @@ grid-template-columns: 1fr 1fr;
 
 const Image = styled.img`
 width: 350px;
+@media screen and (max-width: 524px) {
+            width: 300px;
+        }
 `;
 
 const Ul = styled.ul`
@@ -60,7 +63,7 @@ export const Header = () => {
     }
 
     return (<HeaderDiv>
-        <Image  id="logo" src="http://localhost:3000/assets/logo_fullstak.svg" />
+        <Image  id="logo" src="/assets/logo_fullstak.svg" />
         
         <Ul>
             <li><a href="#"> <FaAngular/> Angular</a></li>

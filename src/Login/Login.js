@@ -6,60 +6,17 @@ import * as auth from "./../Redux/actions/authActions";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-@import url(
-	https://fonts.googleapis.com/css?family=Source + Sans + Pro:200,
-	300
-);
-
-@prim: #53e3a6;
-
-& * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-
-	font-weight: 300;
+& h1 {
+  color: gold;
 }
-
-	font-family: "Source Sans Pro", sans-serif;
-	color: white;
-	font-weight: 300;
-
-	::-webkit-input-placeholder {
-		/* WebKit browsers */
-		font-family: "Source Sans Pro", sans-serif;
-		color: white;
-		font-weight: 300;
-	}
-	:-moz-placeholder {
-		/* Mozilla Firefox 4 to 18 */
-		font-family: "Source Sans Pro", sans-serif;
-		color: white;
-		opacity: 1;
-		font-weight: 300;
-	}
-	::-moz-placeholder {
-		/* Mozilla Firefox 19+ */
-		font-family: "Source Sans Pro", sans-serif;
-		color: white;
-		opacity: 1;
-		font-weight: 300;
-	}
-	:-ms-input-placeholder {
-		/* Internet Explorer 10+ */
-		font-family: "Source Sans Pro", sans-serif;
-		color: white;
-		font-weight: 300;
-	}
-
-& .container {
+.container {
 	max-width: 600px;
 	margin: 0 auto;
 	padding: 80px 0;
 	height: 400px;
 	text-align: center;
 
-	& h1 {
+	h1 {
 		font-size: 40px;
 		transition-duration: 1s;
 		transition-timing-function: ease-in-put;
@@ -67,17 +24,17 @@ const Wrapper = styled.div`
 	}
 }
 
-& form {
+form {
 	padding: 20px 0;
 	position: relative;
 	z-index: 2;
 
-	& input {
+	input {
 		display: block;
 		appearance: none;
 		outline: 0;
-		border: 1px solid fade(white, 40%);
-		background-color: fade(white, 20%);
+		border: 1px solid #ffffff3d;
+		background-color: #ffffff1d;
 		width: 250px;
 
 		border-radius: 3px;
@@ -93,18 +50,18 @@ const Wrapper = styled.div`
 		font-weight: 300;
 
 		&:hover {
-			background-color: fade(white, 40%);
+			background-color: #ffffff1d;
 		}
 
 		&:focus {
-			background-color: white;
+			background-color: #ffffff47;
 			width: 300px;
 
 			color: @prim;
 		}
 	}
 
-	& button {
+	button {
 		appearance: none;
 		outline: 0;
 		background-color: white;
@@ -132,14 +89,13 @@ const Wrapper = styled.div`
 
 	z-index: 1;
 
-	& li {
+	li {
 		position: absolute;
 		list-style: none;
 		display: block;
 		width: 40px;
 		height: 40px;
-    background-color: #ffffff1d;
-    ;
+		background-color: #ffffff1d;
 		bottom: -160px;
 
 		-webkit-animation: square 25s infinite;
@@ -261,13 +217,23 @@ export default () => {
   return (
     <Wrapper>
       <div className="container">
-        <h1>Welcome</h1>
-        <h4>Example fake login</h4>
+        <h1>Fake Access User</h1>
 
         <form className="form">
-          <input type="text" placeholder="Username" />
-          <input type="password" placeholder="Password" />
-          <button type="button" id="login-button" onClick={ handleSubmit }>
+          <input type="text" placeholder="Username"
+            id="username"
+            name="username"
+            value={state.username}
+            onChange={handleInputChange}
+           />
+          <input type="password" placeholder="Password"
+            id="password"
+            name="password"
+            value={state.password}
+            onChange={handleInputChange}
+
+          />
+          <button type="submit" id="loginSubmit" onClick={handleSubmit}>
             Login
           </button>
         </form>
