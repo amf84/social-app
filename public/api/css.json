@@ -1,0 +1,61 @@
+[
+    {
+        "tags": [ "text", "animation" ],
+        "title": "116 Cool CSS Text Effects Examples That You Can Download",
+        "image": "https://www.designyourway.net/blog/wp-content/uploads/2015/03/XJbzrO.jpg",
+        "url": "https://www.designyourway.net/blog/web-and-mobile-design/yes-you-can-actually-make-these-text-effects-in-css/",
+        "description": "You came here for some really cool CSS text effects that will help you make amazing web typography for your websites. Web typography has changed with CSS3."
+    },
+    {
+        "tags": [ "backgroung" ],
+        "title": "CSS Gradient — Generator, Maker, and Background",
+        "image": "https://cssgradient.io/images/css-gradient-share-23a5b71f.png",
+        "url": "https://cssgradient.io/",
+        "description": "You came here for some really cool CSS text effects that will help you make amazing web typography for your websites. Web typography has changed with CSS3."
+    },
+    {
+        "tags": [ "guide", "tutorial" ],
+        "title": "CSS Gradient — Generator, Maker, and Background",
+        "image":"https://i2.wp.com/css-tricks.com/wp-content/uploads/2014/03/css-tricks-star.png?fit=512%2C512&ssl=1",
+        "url": "https://css-tricks.com/",
+        "description": "Daily articles about CSS, HTML, JavaScript, and all things related to web design and development"
+    },
+    {
+        "tags": [ "grid", "tutorial" ],
+        "title": "Grid Garden - Un juego para aprender CSS grid",
+        "image":"http://cssgridgarden.com/images/screenshot.png",
+        "url": "http://cssgridgarden.com/",
+        "description": "A game for learning CSS grid layout"
+    },
+    {
+        "tags": [ "flexbox", "tutorial" ],
+        "title": "Flexbox Froggy",
+        "image":"https://flexboxfroggy.com/images/screenshot.png",
+        "url": "https://flexboxfroggy.com/#es",
+        "description": "A game for learning CSS flexbox"
+    },
+    {
+        "tags": [ "flexbox", "tutorial" ],
+        "title": "Flexy Boxes — CSS flexbox playground and code generation tool",
+        "image":"",
+        "url": "https://the-echoplex.net/flexyboxes/",
+        "description": "Online CSS flexbox playground and code generator. Supports all existing flexbox implementations."
+    },
+    {
+        "tags": [ "button", "examples" ],
+        "title": "30 cool CSS Buttons - with animations!",
+        "image":"https://webdeasy.de/wp-content/uploads/2019/06/top-css-buttons.jpg",
+        "url": "https://webdeasy.de/en/top-css-buttons-en/",
+        "description": "30 cool CSS buttons with animations and hover effects for your website! From hamburger menu to reponsive buttons, everything is included. Let yourself be inspired!"
+    },
+    {
+        "tags": [ "button", "examples" ],
+        "title": "30 cool CSS Buttons - with animations!",
+        "image":"https://webdeasy.de/wp-content/uploads/2019/06/top-css-buttons.jpg",
+        "url": "https://webdeasy.de/en/top-css-buttons-en/",
+        "description": "30 cool CSS buttons with animations and hover effects for your website! From hamburger menu to reponsive buttons, everything is included. Let yourself be inspired!"
+    }
+
+    
+
+]

@@ -16,7 +16,7 @@ export function AppRouter() {
     <Router>
         <Switch>
           <AuthRoute exact path="/login">
-            <Layout component={<Login />} />
+          <Login />
           </AuthRoute>
           <PrivateRoute exact path="/">
             <Layout component={<Home />} />
